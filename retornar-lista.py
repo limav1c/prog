@@ -2,13 +2,16 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-app.route("/")
+@app.route("/")
 def padrao():
     # cria o texto de retorno padrão com links :-p
-    return '''Exemplo de servidor que retorna lista. Ações:
+    return 
+
+'''Exemplo de servidor que retorna lista. Ações:
     <a href="/lista_texto">Lista em texto</a> | 
     <a href="/lista_json">Lista em json</a>
-    '''
+'''
+
 @app.route("/lista_texto")
 def lista_texto():
     # cria a lista
