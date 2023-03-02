@@ -10,6 +10,9 @@ p1 = Pessoa(nome = "João da Silva", email = "josilva@gmail.com",
 # adiciona a pessoa na lista
 lista.append(p1)
 
+print(p1.json())
+
+
 # cria outra pessoa
 p2 = Pessoa(nome = "Maria Oliveira", telefone = "47 98822 2531")
 
