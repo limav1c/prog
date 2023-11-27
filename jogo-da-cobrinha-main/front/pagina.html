@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>Jogo da Cobrinha</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+   <h1>Jogo da Cobrinha</h1>
+    <style>
+
+        body{
+            text-align: center;
+            background-color: rgb(233, 126, 126);
+        }
+
+        h1, h2{
+            color: rgb(252, 255, 87);
+        }
+
+        table,
+        th,
+        td {
+            margin-left: 43%;
+            border: 2px solid;
+            color: rgb(255, 0, 0);
+        }
+        
+    </style>
+    <img src="../cobrinha.png" width="70px" height="80px">
+    <h2>Jogadores</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>nome</th>
+                <th>maçãs coletadas</th>
+            </tr>
+        </thead>
+        <tbody id="jogadores"></tbody>
+    </table>
+
+    <!-- inclusão da biblioteca jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="utils.js"></script>
+    <script>
+        // proteção para não executar o javascript antes do documento estar pronto
+        $(function () {
+
+            // chamadas à função genérica
+            // nome_classe, nome_div, lista_campos, elemento_html, html_antes, html_depois
+            listagem_generica("Jogador", "jogadores", ['id', 'nome', 'macas_coletadas'], "<tr>", "<td>", "</td>");            
+        });
+    </script>
+</body>
+</html>
